@@ -10,41 +10,75 @@ body {
 header {
     background-color: #fff;
     color: #003366;
-    padding: 20px 0;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo img {
-    width: 150px;
-    margin-left: 20px; /* Añade un margen a la izquierda del logo */
+    width: 100px;
+    margin-left: 20px;
 }
 
+/* Estilos para la lista de navegación en el encabezado */
 nav ul {
     list-style: none;
-    text-align: right;
+    padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 nav li {
-    display: inline;
-    margin-right: 24px;
+    margin-right: 20px;
 }
 
 nav a {
-    color: #003366;
     text-decoration: none;
+    color: #003366;
     font-weight: bold;
     font-size: 18px;
+    transition: color 0.3s ease-in-out;
 }
 
+nav a:hover {
+    color: #FF9800;
+}
+
+/* Estilos para los íconos de las redes sociales */
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #003366;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.social-icons__link:hover {
+    background-color: #FF9800;
+}
+
+.social-icons__link svg {
+    width: 100%;
+    height: auto;
+    fill: white;
+}
 
 /* Estilos del banner */
 .banner {
     text-align: center;
     padding: 100px 0;
     background-color: #003366;
-    color: #fff;
+    color: white;
     border-radius: 10px;
 }
 
@@ -61,16 +95,26 @@ nav a {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-contacto:hover {
+    background-color: #FFB74D;
 }
 
 /* Estilos de secciones */
 section {
     padding: 40px;
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    color: #003366;
 }
 
 /* Estilos del footer */
@@ -84,91 +128,295 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
-.social-media {
+.social-icons {
     font-size: 24px;
+}
+
+.social-icons__link {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons__link:hover {
+    color: #FF9800;
 }
 
 .contact-info {
     text-align: right;
 }
 
-/* Estilos para la sección de Servicios */
-#servicios {
-    background-color: #f7f7f7;
-    padding: 60px 0;
-}
-
-.servicio {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.servicio h3 {
-    color: #003366;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.servicio p {
-    color: #555;
+.contact-info p {
+    margin: 0;
     font-size: 16px;
 }
 
-/* Estilos para la sección Acerca de Nosotros */
-#acerca {
-    background-color: #003366;
-    color: white;
-    padding: 60px 0;
-}
-
-#acerca p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* Estilos para la sección de Testimonios */
-#testimonios {
-    padding: 60px 0;
-}
-
-.testimonial {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.testimonial p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.testimonial .cliente {
+.contact-info a {
+    color: #FF9800;
+    text-decoration: none;
     font-weight: bold;
 }
 
-/* Estilos para la sección de Contacto */
-#contacto {
-    background-color: #003366;
-    color: white;
-    padding: 60px 0;
+
+
+
+/* Estilos para el header (puedes reutilizar los estilos existentes) */
+header {
+    background-color: #fff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-#contacto p {
+/* Estilos para los enlaces en el header */
+header ul {
+    list-style: none;
+    padding: 0;
+}
+
+header ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
     font-size: 18px;
-    line-height: 1.6;
 }
 
-.formulario {
-    /* Estilos para el formulario de contacto (debes agregar los estilos específicos aquí) */
+/* Estilos para el enlace activo en el header */
+header a.active {
+    border-bottom: 2px solid #fff;
 }
 
-.mapa {
-    /* Estilos para el mapa (debes agregar los estilos específicos aquí) */
+
+/* Agrega más estilos según tus preferencias */
+
+/* Estilos para el botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #eef4ee;
+    border-radius: 94%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.whatsapp-button a {
+    display: flex;
+    padding: 20px 5px;
+}
+
+.whatsapp-button img {
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+}
+    
+
+/* Estilos para la página "Acerca de Nosotros" */
+
+/* Contenedor principal de Acerca de Nosotros */
+#acerca {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+}
+
+#acerca h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Contenido de Acerca de Nosotros */
+.acerca-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la sección de testimonios */
+#testimonios {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#testimonios h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.testimonial {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial blockquote {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.testimonial p.cliente {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Estilos adicionales según sea necesario */
+
+
+/* Estilos para la página de contacto */
+
+/* Contenedor principal de la página de contacto */
+#contacto {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+}
+
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #FF9800;
+}
+
+/* Mapa (puedes agregar estilos específicos si incorporas un mapa) */
+
+/* Footer (reutiliza los estilos del index.html si son adecuados) */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    /* Agrega aquí tus estilos para pantallas pequeñas */
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+    .logo img {
+        width: 80px;
+        margin-left: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        background-color: #fff; /* Agrega un fondo blanco para el menú móvil */
+        position: absolute;
+        top: 60px; /* Ajusta la posición del menú móvil según tu diseño */
+        left: 0;
+        width: 100%;
+    }
+    nav ul.show {
+        display: flex; /* Muestra el menú cuando se hace clic en el botón */
+    }
+    nav li {
+        margin-right: 0; /* Reduce el margen entre elementos de la lista en dispositivos móviles */
+        margin-bottom: 10px; /* Espacio entre elementos en dispositivos móviles */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .whatsapp-button {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+#servicios h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilos para servicios y subcategorías */
+
+.servicio, .subcategoria {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio:hover, .subcategoria:hover {
+    transform: translateY(-5px);
+}
+
+.servicio h3, .subcategoria h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.servicio p, .subcategoria p {
+    font-size: 16px;
+    color: #555;
+    text-align: left;
 }
